@@ -1,0 +1,302 @@
+/* SCSS HEX */
+/* undohtml.css */
+/* (CC) 2004 Tantek Celik. Some Rights Reserved.                  */
+/* http://creativecommons.org/licenses/by/2.0                     */
+/* This style sheet is licensed under a Creative Commons License. */
+/* Purpose: undo some of the default styling of common (X)HTML browsers */
+/* link underlines tend to make hypertext less readable, 
+   because underlines obscure the shapes of the lower halves of words */
+:link, :visited {
+  text-decoration: none;
+}
+
+/* no list-markers by default, since lists are used more often for semantics */
+ul, ol {
+  list-style: none;
+}
+
+/* avoid browser default inconsistent heading font-sizes */
+/* and pre/code too */
+h1, h2, h3, h4, h5, h6, pre, code {
+  font-size: 1em;
+}
+
+/* remove the inconsistent (among browsers) default ul,ol padding or margin  */
+/* the default spacing on headings does not match nor align with 
+        normal interline spacing at all, so let's get rid of it. */
+/* zero out the spacing around pre, form, body, html, p, blockquote as well */
+/* form elements are oddly inconsistent, and not quite CSS emulatable. */
+/*  nonetheless strip their margin and padding as well */
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input {
+  margin: 0;
+  padding: 0;
+}
+
+/* whoever thought blue linked image borders were a good idea? */
+a img, :link img, :visited img {
+  border: none;
+}
+
+a {
+  color: black;
+}
+
+/* de-italicize address */
+address {
+  font-style: normal;
+}
+
+body {
+  background-image: url(src/img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Bangers;
+  color: white;
+}
+
+body h1 {
+  padding-top: 40px;
+  font-size: 9vh;
+  text-align: center;
+  background-color: rgba(199, 109, 109, 0.795);
+}
+
+.caption {
+  text-align: center;
+  background-color: rgba(199, 109, 109, 0.795);
+  padding-bottom: 10px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.253);
+}
+
+.input {
+  margin: 50px 50px;
+  min-width: 300px;
+  height: 400px;
+  background-color: rgba(253, 253, 253, 0.342);
+  border-radius: 10px;
+}
+
+.input h2 {
+  color: #396339;
+  padding: 10px;
+  font-size: 7vh;
+}
+
+.input p {
+  font-size: 3vh;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #39b963;
+  background-color: rgba(5, 77, 29, 0.747);
+  height: 60px;
+  line-height: 60px;
+}
+
+.settings p {
+  margin: 0 10px;
+  font-size: 5vh;
+}
+
+.input-text {
+  color: black;
+  margin-left: 10px;
+}
+
+.add-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 4vh;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-sub img {
+  width: 20px;
+}
+
+.increase {
+  font-size: 4vh;
+  padding: 0 10px;
+  width: 30px;
+  color: #fdfdfd;
+}
+
+.increase:hover {
+  background-color: #39b963;
+}
+
+.inside {
+  padding: 0 20px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.678);
+  color: black;
+}
+
+.decrease {
+  font-size: 4vh;
+  padding: 0 10px;
+  width: 30px;
+  color: white;
+}
+
+.decrease:hover {
+  background-color: #a82f2f;
+}
+
+.output {
+  font-size: 7vh;
+  margin: 50px 50px;
+  width: 700px;
+  height: 550px;
+  background-color: rgba(253, 253, 253, 0.342);
+  border-radius: 10px;
+}
+
+.output h2 {
+  color: #396339;
+  padding: 10px;
+}
+
+.output p {
+  font-size: 3vh;
+  text-align: center;
+  color: #39b963;
+  background-color: rgba(5, 77, 29, 0.747);
+  margin-bottom: 10px;
+}
+
+.sorce {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.678);
+  text-align: center;
+}
+
+.sorce span {
+  color: black;
+}
+
+.unit {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+#animals-score {
+  color: #bd2d2d;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #39b963;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #ccc;
+          box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 40px;
+}
+
+.switcher p {
+  margin: 6px 15px;
+}
+
+.footer {
+  color: black;
+  font-size: 2vh;
+  text-align: right;
+}
+
+.footer img {
+  width: 20px;
+  padding-top: 30px;
+}
+
+.footer a {
+  position: relative;
+  bottom: 4px;
+  margin: 0 15px;
+}
+/*# sourceMappingURL=styles.css.map */

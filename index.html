@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Vegan Calculator</title>
+</head>
+<body>
+    <h1>VEGAN Calc</h1>
+    <p class="caption">It is making diference...</p>
+    <div class="container">
+        <div class="input">
+            <h2>Duration info:</h2>
+            <p class="input-text">How Long You are a Vegan?</p>
+            <div class="settings">
+                <p>Days</p>
+                <div class="add-sub">
+                    <div class="decrease" id="sub-days"><img src="src/img/minus.png" alt=""></div>
+                    <div class="inside" id="days"></div>
+                    <div class="increase" id="add-days"><img src="src/img/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="settings">
+                <p>Months</p>
+                <div class="add-sub">
+                    <div class="decrease" id="sub-months"><img src="src/img/minus.png" alt=""></div>
+                    <div class="inside" id="months">0</div>
+                    <div class="increase" id="add-months"><img src="src/img/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="settings">
+                <p>Years</p>
+                <div class="add-sub">
+                    <div class="decrease" id="sub-years"><img src="src/img/minus.png" alt=""></div>
+                    <div class="inside" id="years">0</div>
+                    <div class="increase" id="add-years"><img src="src/img/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="switcher">
+                <p class="input-text">VEGAN</p>
+
+                <label class="switch">
+                    <input type="checkbox" id="vegan-switch">
+                    <span class="slider round"></span>
+                </label>
+                <p class="input-text">VEGETARIAN</p>
+            </div>
+        </div>
+        <div class="output"> 
+            <h2>You Saved:</h2>
+            <div class="sorce">
+                <p>ANIMAL LIVES</p>
+                <span id="animals-score">0</span>
+            </div>
+            <div class="sorce" >
+                <p>carbon dioxide</p>
+                <span id="carbon-score">0</span><span class="unit">kg</span>
+            </div>
+            <div class="sorce" >
+                <p>FOREST AREA</p>
+                <span id="forests-score">0</span><span class="unit">&#13217</span>
+            </div>
+            <div class="sorce" >
+                <p>WATER</p>
+                <span id="water-score">0</span> <span class="unit">L</span>
+            </div>
+            <div class="footer">
+                <img src="src/img/github(1).png">
+                <a href="https://mbednarz.website/">mbednarz.website</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
